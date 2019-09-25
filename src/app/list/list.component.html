@@ -1,1 +1,26 @@
-<p>list works!</p>
+<!-- <div class="container">
+
+  <!-- <ul>
+    <li ngFor></li>
+  </ul> -->
+
+
+  <!-- <tr *ngFor="let brew of brews">
+    <td >{{brew.id}}</td>
+    <td>  --  </td>
+    <td *ngIf="brew.brewery_type==='micro'">{{brew.name}}</td>
+
+  </tr> -->
+
+
+
+
+<h1>Restaurants</h1>
+
+<ul *ngIf="brews">
+  <li *ngFor="let brew of brews">
+    <p class="name">{{brew.name}}</p>
+    <p class="country">{{brew.country}}</p>
+    <a href="{{ brew.website_url }}" class="site">site</a>
+  </li>
+</ul>

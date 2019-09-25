@@ -16,12 +16,13 @@
 
  <!-- practice with ng-template here: ---- 2 ways to do style binding...-->
  <!-- <div class="gallery-window" [style.background-color]="clickCounter > 4 ? 'green': 'grey'"> -->
- <div class="gallery-window" [ngStyle]="{
+
+  <!-- <div class="gallery-window" [ngStyle]="{
    'background-color': clickCounter > 4 ? 'yellow': 'lightgray',
-   'border':           clickCounter > 4 ? '4px solid black': 'none'
- }">
+   'border':           clickCounter > 2 ? '4px solid black': 'none'
+ }"> -->
 
-
+<div class="gallery-window" [ngClass]="setClasses()">
 
 
    <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">

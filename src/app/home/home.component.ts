@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,9 +14,20 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
   countClick() {
-    this.clickCounter += 1;
+    this.clickCounter ++;
   }
+
+  setClasses () {
+    let myClasses = {
+      active: this.clickCounter > 4,
+      notactive: this.clickCounter <= 4,
+    }
+    return myClasses;
+
+  }
+  r
 }
